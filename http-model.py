@@ -1,6 +1,7 @@
 #!/Library/Frameworks/Python.framework/Versions/3.6/bin/python3
 
 import flask
+from models import naive_bayes
 
 from flask import request, redirect
 
@@ -21,6 +22,9 @@ def get_model():
 @app.route('/model/<name>', methods=['GET', 'POST'])
 def create_model(name):
     print(name)
+    if request.method is not 'GET':
+        model = naive_bayes.new_naive_bayes_model(name)
+        naive_bayes.serialize_model(model, 'models/pickled_models/{}'.format(name))
     return 'You can create a new model called {0} here!'.format(name)
 
 
