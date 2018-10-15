@@ -4,7 +4,6 @@ from os import path
 from textblob.classifiers import NaiveBayesClassifier
 
 
-
 class HTTPNaiveBayesModel:
     def __init__(self, name):
         self.name = name
