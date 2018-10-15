@@ -23,9 +23,12 @@ def get_model():
 def create_model(name):
     print(name)
     if request.method is not 'GET':
-        model = naive_bayes.new_naive_bayes_model(name)
+        nb = naive_bayes.HTTPNaiveBayesModel(name)
+        model = nb.new_naive_bayes_model()
         naive_bayes.serialize_model(model, 'models/pickled_models/{}'.format(name))
-    return 'You can create a new model called {0} here!'.format(name)
+        return 'The {0} model has been created. It can be updated here /model/{0}.\n'.format(name)
+    else:
+        return 'You can create a new model called {0} here!\n'.format(name)
 
 
 if __name__ == '__main__':
