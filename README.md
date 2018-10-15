@@ -1,2 +1,13 @@
-# http-model
-An HTTP server for deep learning models.
+# HTTP-Model
+An HTTP server for deep learning models and natural language processing.
+
+HTTP-Model is a microservice for your natural language processing models 
+that can be updated dynamically via REST and JSON.
+
+This is currently a work in progress. Below are the list of supported algorithms.
+
+#### Supported Algorithms:
++ Naive Bayes
+
+If you would like to contribute to this project send a pull request.
+
