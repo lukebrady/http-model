@@ -35,3 +35,19 @@ def serialize_model(model, model_path):
             return 'Error: Could not serialize the model to {}.'.format(path)
     else:
         return '{} already exists.'.format(model)
+
+
+# Serialize the model to disk that can be read into memory when needed.
+# @param model: The model that will be serialized to disk.
+# @param path: The location of the where the model will be serialized.
+def deserialize_model(model_path):
+    if path.exists(model_path):
+        # Dump the model to disk.
+        try:
+            with open(model_path, mode='rb') as pickle_file:
+                model = pickle.loads(pickle_file.read())
+                return model
+        except IOError:
+            return 'Error: Could not serialize the model to {}.'.format(path)
+    else:
+        return '{} does not exist.'.format(model_path)
