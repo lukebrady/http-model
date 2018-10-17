@@ -50,7 +50,7 @@ HTTP-Model is still a work in progress with limited functionality. It is not rea
 ## Contributing
 If you would like to contribute to this project send a pull request.
 
-## LICENSE
+## License
 
 The MIT License (MIT). Please see License File for more information.
 
