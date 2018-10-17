@@ -10,8 +10,3 @@ def convert_json_into_data_set(obj):
     # Now return the newly created data set.
     print(data_set)
     return data_set
-
-
-if __name__ == '__main__':
-    jsonString = open('test.json', 'r').read()
-    convert_json_into_data_set(jsonString)
