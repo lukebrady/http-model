@@ -16,6 +16,6 @@ echo $JSON_FILE
 echo $MODEL_NAME
 
 # Post the JSON file to the model path.
-curl -XPOST -H "Content-Type:application/json" http://localhost:8909/model/$MODEL_NAME/update -d '$(JSON_FILE)'
+curl -XPOST -H "Content-Type:application/json" http://localhost:8909/model/$MODEL_NAME/update -d "$JSON_FILE"
 
 

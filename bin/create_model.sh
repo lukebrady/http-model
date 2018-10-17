@@ -16,4 +16,4 @@ echo $JSON_FILE
 echo $MODEL_NAME
 
 # Post the JSON file to the model path.
-curl -XPOST http://localhost:8909/model/$MODEL_NAME/create -d '$(JSON_FILE)' -H "Content-Type: application/json"
+curl -XPOST http://localhost:8909/model/$MODEL_NAME/create -d "$JSON_FILE" -H "Content-Type: application/json"
