@@ -1,6 +1,5 @@
 ![HTTP-MODEL](https://github.com/lukebrains/http-model/blob/master/logo/model_logo.png "HTTP-Model")
 # HTTP-Model
-<br/><br/>
 An HTTP server for deep learning models and natural language processing.
 
 HTTP-Model is a microservice for your natural language processing models 
