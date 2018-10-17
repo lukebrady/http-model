@@ -1,4 +1,4 @@
-![HTTP-MODEL](https://github.com/lukebrains/http-model/logo/http_model.png "HTTP-Model")
+![HTTP-MODEL](https://github.com/lukebrains/http-model/blob/master/logo/http_model.png "HTTP-Model")
 # HTTP-Model
 An HTTP server for deep learning models and natural language processing.
 
