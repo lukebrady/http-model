@@ -32,7 +32,7 @@ def create_model(name):
         # Serialize the model to disk.
         model_redis.set_model(name, model)
         # naive_bayes.serialize_model(model, 'models/pickled_models/{}'.format(name))
-        return 'The {0} model has been created. It can be updated here /model/{0}.\n'.format(name)
+        return 'The {0} model has been created. It can be updated here /model/{0}/update.\n'.format(name)
     else:
         return 'An initial data set must be submitted to create a model.'
 
@@ -67,6 +67,17 @@ def classify_request(name):
     classification = model.classify(obj['Text'])
     return '{}\n'.format(classification)
 
+
+# Delete a model in the redis cache.
+@app.route('/model/<name>/delete', methods=['GET'])
+def delete_model(name):
+    # Remove the model from redis.
+    result = model_redis.remove_model(name)
+    print(result)
+    if int(result) != 0:
+        return '{} could not be deleted.\n'.format(name)
+    else:
+        return '{} was successfully deleted.\n'.format(name)
 
 if __name__ == '__main__':
     app.run(host='localhost', port=8909, debug=True)

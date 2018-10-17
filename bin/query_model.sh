@@ -2,8 +2,6 @@
 
 # This script is used to query an existing model.
 
-echo "Early version of the curl tools for models."
-
 if [[ -z $1 ]] || [[ -z $2 ]]; then
     echo "Use: query_model.sh <text_to_classify> <model_name>"
     exit 1;

@@ -10,7 +10,14 @@ def set_model(name, model):
 
 def get_model(name):
     pickle_model = r.get(name)
-    # Unpickle the model and return.
-    return pickle.loads(pickle_model)
+    if pickle_model is not None:
+        # Unpickle the model and return.
+        return pickle.loads(pickle_model)
+    return 'The {0} model does not exist.\nYou can create it using /model/{0}/create.\n'.format(name)
+
+def remove_model(name):
+    result = r.delete(name)
+    return result
+
 
 
