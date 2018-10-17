@@ -73,8 +73,7 @@ def classify_request(name):
 def delete_model(name):
     # Remove the model from redis.
     result = model_redis.remove_model(name)
-    print(result)
-    if int(result) != 0:
+    if int(result) != 1:
         return '{} could not be deleted.\n'.format(name)
     else:
         return '{} was successfully deleted.\n'.format(name)
