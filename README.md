@@ -10,6 +10,8 @@ This is currently a work in progress. Below are the list of supported algorithms
 #### Supported Algorithms:
 + Naive Bayes
 
+## Usage
+
 Data sets are represented by JSON objects. Below is an example of JSON that would be accepted by the system.
 ```json
 {
@@ -42,5 +44,13 @@ To delete a model run the bin/delete_model.sh script.
 $ bin/delete_model.sh <model_name>
 ```
 
+## Disclaimer
+HTTP-Model is still a work in progress with limited functionality. It is not ready to run in production.
+
+## Contributing
 If you would like to contribute to this project send a pull request.
+
+## LICENSE
+
+The MIT License (MIT). Please see License File for more information.
 
