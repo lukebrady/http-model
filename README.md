@@ -10,7 +10,7 @@ This is currently a work in progress. Below are the list of supported algorithms
 #### Supported Algorithms:
 + Naive Bayes
 
-Data sets are represented by JSON strings. Below is an example of JSON that would be accepted by the system.
+Data sets are represented by JSON objects. Below is an example of JSON that would be accepted by the system.
 ```json
 {
   "Data" : 
